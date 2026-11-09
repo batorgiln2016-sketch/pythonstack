@@ -12,7 +12,7 @@ def IsEmpty():
 
 
 def IsFull():
-    return TopofStack == 8
+    return TopofStack == 9
 
 
 # Exercise 2
