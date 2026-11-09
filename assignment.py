@@ -8,13 +8,11 @@ TopOfStack = -1
 
 
 def IsEmpty():
-    # Write your code here
-    pass
+    return TopOfStack == -1
 
 
 def IsFull():
-    # Write your code here
-    pass
+    return TopofStack == 8
 
 
 # Exercise 2
