@@ -23,8 +23,12 @@ def Push(Item):
 
 # Exercise 3
 def Pop():
-    # Write your code here
-    pass
+    global Stack, TopOfStack
+if TopOfStack == -1:
+return -1
+DataToReturn = Stack[TopOfStack]
+TopOfStack = TopOfStack - 1
+return DataToReturn
 
 
 # Exercise 4
