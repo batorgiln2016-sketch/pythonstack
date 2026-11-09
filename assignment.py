@@ -2,48 +2,45 @@
 # Do NOT use .append() or .pop() inside Push() and Pop() - move TopOfStack yourself.
 
 # Exercise 1
-Stack = []
-TopOfStack = -1
-# Write code here to fill Stack with 10 elements, all -1
-
 
 def IsEmpty():
     return TopOfStack == -1
 
 
 def IsFull():
-    return TopofStack == 9
-
+    return TopOfStack == 9
 
 # Exercise 2
 def Push(Item):
-    # Write your code here
-    pass
-
+    global TopOfStack
+    if IsFull():
+        return -1
+    TopOfStack = TopOfStack + 1
+    Stack[TopOfStack] = Item
 
 # Exercise 3
 def Pop():
-global Stack, TopOfStack
-if TopOfStack == -1:
-return -1
-DataToReturn = Stack[TopOfStack]
-TopOfStack = TopOfStack - 1
-return DataToReturn
-
+    global TopOfStack
+    if IsEmpty():
+        return -1
+    DataToReturn = Stack[TopOfStack]
+    TopOfStack = TopOfStack - 1
+    return DataToReturn
 
 # Exercise 4
 def Peek():
-    if TopOfStack == -1:
-return -1
-return Stack[TopOfStack]
-
-
+    if IsEmpty():
+        return -1
+    return Stack[TopOfStack]
 def Size():
     return TopOfStack + 1
 
 
 # Exercise 5
 def ReverseWord(Word):
-    # Write your code here
-    pass
-
+    ReversedWord = ""
+    for Letter in Word:
+        Push(Letter)
+    while not IsEmpty():
+        ReversedWord = ReversedWord + Pop()
+    return ReversedWord
