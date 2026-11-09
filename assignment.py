@@ -33,8 +33,9 @@ return DataToReturn
 
 # Exercise 4
 def Peek():
-    # Write your code here
-    pass
+    if TopOfStack == -1:
+return -1
+return Stack[TopOfStack]
 
 
 def Size():
